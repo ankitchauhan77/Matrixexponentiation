@@ -88,6 +88,7 @@ vector<vll> mat_mul(vector<vll>& M1, vector<vll>& M2){
         fll(j, 0, m2){
             fll(o, 0, n2){
                 ans[i][j] = (ans[i][j] + (M1[i][o] * M2[o][j]) % md) % md;
+                ans[i][j] = (ans[i][j] + md) % md;
             }
         }
     }
